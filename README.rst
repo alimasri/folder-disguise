@@ -13,6 +13,10 @@ The good thing here is that they do not just look like system files, they behave
 What will look like a normal recycle bin will be a disguise that holds all your secrets.
 It is simple, safe and worth trying.
 
+The basic idea behind this disguise is the Windows GUIDs.
+Each system file in windows has a specific Id that is when appended to folders will let windows target them as system files.
+By appending these GUIDs to our folders we will be able to hide our information, and the rollback process is as simple as removing them.
+
 Installation
 ============
 
@@ -45,12 +49,26 @@ After the installation process is finished you can access the program from a com
 
 1. f: is the folder path to be disguised/restored
 
-2. m: is the mode (d for disguise and r to restore the disguised file to the original state)
+2. m: is the mode ('d' for disguise and 'r' to restore the disguised file to the original state)
 
 3. d: is the disguise type (it is a number representation that can be accessed from the section below)
 
 Note: if d is omitted the program will display the list with the numbers in the prompt
 
+
+Examples
+========
+
+To disguise MyFolder as Administrative Tools we run:
+
+`folder_disguise -f MyFolder -m d -d 1`
+
+To restore the folder into the original state we run:
+
+`folder_disguise -f MyFolder.{D20EA4E1-3957-11d2-A40B-0C5020524153} -m r`
+
+We note here that this weird name is what makes the folder disguise as a system folder.
+You can easily get it by typing first letters of the folder name then pressing TAB.
 
 GUID List
 =========
