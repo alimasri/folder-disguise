@@ -20,25 +20,17 @@ By appending these GUIDs to our folders we will be able to hide our information,
 Installation
 ============
 
-Installing Folder Disguise is very simple.
+Installing the application is very simple.
 To do so please follow the directions below:
 
 1. Install Python https://www.python.org/downloads/ and add it to your path
-
-2. Check if you have pip (python package manager) installed by running `pip --version`
+2. Install Git https://git-scm.com/downloads and add it yo your path
+3. Check if you have pip (python package manager) installed by running `pip --version`
 
  a. If not download the file [get-pip.py] (https://bootstrap.pypa.io/get-pip.py/), being careful to save it as a .py file rather than .txt
  b. Run it from the command prompt: python get-pip.py
 
-3. Download the project
-
-4. Navigate to the project's directory
-
-5. Run the command: `pip install -r requirements.txt`
-
-6. Run the command: `python setup.py install`
-
-This command will download and install the project with the required dependencies.
+4. Run the command `pip install git+https://github.com/alimasri/folder-disguise`
 
 Usage
 =====
